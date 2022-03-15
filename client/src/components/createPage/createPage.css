@@ -1,0 +1,28 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: rgb(177, 164, 46);
+    width: 600px;
+;
+    height:fit-content;
+    align-items:initial;
+    margin: 0 auto
+    ;
+}
+.inputcreacion {
+    
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+}
+.bgcreate{
+min-height: 100vh;
+    background-image: url("C:\Users\PiruPiru\Desktop\PI-Pokemon-main\client\src\components\imagenes\charmander.jpg");
+    background-size:cover;
+}

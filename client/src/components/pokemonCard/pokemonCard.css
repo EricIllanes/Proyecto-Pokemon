@@ -1,0 +1,12 @@
+.cardconte{
+align-items: center;
+}
+
+.imagecard{
+    width: 200px;
+    
+}
+
+.imagecard:hover {
+    transform:scale(1.15);
+}

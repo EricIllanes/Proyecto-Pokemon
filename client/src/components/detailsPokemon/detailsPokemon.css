@@ -1,0 +1,59 @@
+
+.detailcard{
+    background-image: url("C:\Users\PiruPiru\Desktop\PI-Pokemon-main\client\src\components\imagenes\backgroundhomee.jpg");
+    background-size: cover;
+    min-width: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+    display: flex;
+}
+.spanprincipal{
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: rgb(177, 164, 46);
+    width: 400px;
+    margin-left: 30px;
+    max-height:max-content;
+    height: 550px;
+}
+.tiposdetail{
+    border-radius: 5px;
+    border: 2px solid rgb(122, 28, 28);
+    flex-direction: row;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.imagedetail{
+    width: 200px
+}
+
+.stats{
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: rgb(177, 164, 46);
+    width: 400px;
+    margin-left: 30px;
+    height: 550px;
+}
+
+.padrecards{
+    display: flex;
+    flex-direction: row;
+    margin: 150px auto;
+}
+.butonpadre{
+    
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.botondetail{
+    font-size: 20px;
+    flex-direction: column;
+    margin: 0 auto;
+}

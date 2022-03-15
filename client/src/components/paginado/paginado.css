@@ -1,0 +1,18 @@
+.paginacion{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-direction: row;
+    margin: 20px auto;
+}
+.botonadelante{
+    margin: auto 10px
+}
+
+.botonatras{
+    margin: auto 10px
+}
+
+.textopaginado{
+    margin: auto 10px
+}
