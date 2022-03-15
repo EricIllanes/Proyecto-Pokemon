@@ -1,7 +1,6 @@
 import { CLEAN, DETAIL_CLEAN, ORDER_POKEMON, GET_POKEMON, SEARCH_POKEMON, FILTERED_POKEMON, DETAILS_POKEMON, GET_TYPES, CREATE_POKEMON, RANDOM_POKEMON } from "../actions"
 import { ASC, DESC, ASCSTR, DESCSTR } from "../../components/orderPokemon/orderPokemon"
 import { sobrecinc, undercinc, api, created, All } from "../../components/filterPokemon/filterPokemon"
-import { basename } from "path"
 const initialState = {
     getpokemons: [],
     pokemons: [],
