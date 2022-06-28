@@ -5,9 +5,9 @@ export default function NavBar() {
 
 
     return (<div>
-        <Link to="/"><button>Landing</button></Link>
-        <Link to="/home"><button>Home</button></Link>
-        <Link to="/createpokemon"><button>Create Digimon</button></Link>
+        <Link to="/"><button style={{borderRadius:'5px'}}>Landing</button></Link>
+        <Link to="/home"><button style={{borderRadius:'5px'}}>Home</button></Link>
+        <Link to="/createpokemon"><button style={{borderRadius:'5px'}}>Create Digimon</button></Link>
 
     </div>)
 }

@@ -12,9 +12,9 @@ export default function PokeRandom() {
 
     return (<div>
         <button
-            className="pokerandom"
+            style={{borderRadius:'5px'}}
             onClick={(e) => onHandleClick(e)}
-        >Nuevos Pokemons</button>
+        >Random Search</button>
 
     </div>)
 }

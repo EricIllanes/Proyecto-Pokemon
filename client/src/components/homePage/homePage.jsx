@@ -40,11 +40,11 @@ export default function HomePage() {
                     <input
                         className="inputbusqueda"
                         type="text"
-                        placeholder="...nombre de Pokémon"
+                        placeholder="...name Pokémon"
                         onChange={(event) => handleInputChange(event)}
                         value={search}
                     ></input>
-                    <button
+                    <button  style={{borderRadius:'5px'}}
                         onClick={() => {
                             if (!search) {
                                 alert("Debes ingresar un Pokémon para buscar")
@@ -53,14 +53,14 @@ export default function HomePage() {
                                 setSearch("")
                             }
                         }}
-                    >Buscar</button>
+                    >Search</button>
                 </div >
 
                 <FilteredPokemon />
                 <OrderPokemon />
                 <PokeRandom />
                 <button
-                    className="botonrefresh"
+                    style={{borderRadius:'5px'}}
                     onClick={(e) => window.location.reload(e)}
                 >Refresh</button>
 
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div>
             {(pokemons.length === 1) ?
                 <button
-                    className="botonrefresh"
+                style={{borderRadius:'5px'}}
                     onClick={(e) => window.location.reload(e)}
                 >Refresh</button> : <></>
             }
@@ -106,7 +106,7 @@ export default function HomePage() {
             <img src={`${Pokedex}`} alt="imagen" />
             <h2>No hemos encontrado un Pokémon de este tipo</h2>
             <button
-                className="botonrefresh"
+                 style={{borderRadius:'5px'}}
                 onClick={(e) => window.location.reload(e)}
             >Refresh</button>
         </div> : <></>
@@ -116,7 +116,7 @@ export default function HomePage() {
                 <img src={`${Prueba}`} alt="imagen" />
                 <h2>Ooops! A wild Snorlax has blocked your path!</h2>
                 <button
-                    className="botonrefresh"
+                    style={{borderRadius:'5px'}}
                     onClick={(e) => window.location.reload(e)}
                 >Refresh</button>
             </div> : <></>

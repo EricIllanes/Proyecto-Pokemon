@@ -1,5 +1,5 @@
 .landingpage{
-    background-image: url("C:\Users\PiruPiru\Desktop\PI-Pokemon-main\client\src\components\imagenes\landing.jpg");
+    background-image: url("C:\Users\Pirupiru\Desktop\Proyecto-Pokemon\client\src\components\imagenes\landing.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,4 +9,29 @@
     background-size:cover;
     min-height: 100vh;
     min-width: 100vh;
+}
+.div-title-button{
+    margin-top: -500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    flex-direction: column;
+    height: 500px;
+    /* background-color: aquamarine; */
+}
+
+.title{
+    font-size: 80px;
+    color: rgb(19, 57, 67);
+    border-radius: 2px solid black;
+}
+
+.button-landing{
+    border-radius: 10px;
+    border: 0px solid transparent;
+    background-color: transparent;
+    box-shadow: 3px 5px 6px rgba(0,0,0,0.2);
+    font-size:30px;
 }

@@ -31,7 +31,7 @@ export default function Paginado({ pagina, setPagina, maximo }) {
                     <button
                         disabled={pagina === 1}
                         onClick={() => previousPage()}
-                        className="botonadelante"
+                        style={{borderRadius:'5px'}}
                     >Atrás</button>
                     <p
                         className="textopaginado"
@@ -39,7 +39,7 @@ export default function Paginado({ pagina, setPagina, maximo }) {
                     <button
                         disabled={pagina === maximo || pagina > maximo}
                         onClick={() => nextPage()}
-                        className="botonatras"
+                        style={{borderRadius:'5px'}}
                     >Siguiente</button>
                 </div> : setPagina(1)
         }

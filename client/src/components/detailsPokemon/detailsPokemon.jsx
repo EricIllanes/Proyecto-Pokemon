@@ -23,7 +23,7 @@ export default function DetailPokemon() {
                     to="/home"
                     onClick={() => dispatch(cleanDetail())}
                 ><button
-                    className="botondetail"
+                style={{borderRadius:'5px'}}
                 >Home</button>
                 </Link>
 

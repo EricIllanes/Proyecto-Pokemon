@@ -1,82 +1,66 @@
-.background{
-background-image: url("C:\Users\PiruPiru\Desktop\PI-Pokemon-main\client\src\components\imagenes\bulbasaur.jpg");
-display: flex;
-flex-direction: column;
-/* justify-content: center; */
-align-self: center;
-background-repeat: no-repeat;
-background-position: center;
-background-size:cover;
-min-height: 100vh;
-/* min-width: 100vh; */
-}
-
-.divcards{
-    display: flex;
-    flex-wrap:wrap;
-    width: 100%;
-    max-width: 1000px;
-    justify-content: center;
-    align-self: center;
-}
-
-.pokemoncard{
-    /* display:grid; */
-    border-radius: 10px;
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(219, 89, 158);
-    width:250px;
-    height: 250px;
-    display:flex;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    align-items: center;
-    text-align: center;
-    flex-direction:row;
-    justify-content: center;
-    margin: 20px auto;
-    height: auto;       
-    min-width: 100px; /* margin de 20px por arriba y por abajo y otorga el mismo en ambos lados*/
-}
-
-.pokemoncard:hover {
-    transform:scale(1.1);
-}
-
-.filtros{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    size: 20px;
-}
-.inputbusqueda{
-    size: 50px;
-    margin-left: 10px;
-}
-
-.notfound{
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.tipos{
-    border-radius: 5px;
- border: 2px solid rgb(122, 28, 28);
- flex-direction: row;
-}
-
-.botonrefresh{
-width: 80px;
-height: 40px;
-margin-top: 0;
-margin-left: 40px;
-margin-right: 10px;
-}
-
-.header{
+.background {
+  background-image: url("https://i.imgur.com/0657X9i.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  /* background: rgb(145, 201, 190);
+  background: linear-gradient(
+    180deg,
+    rgba(145, 201, 190, 1) 0%,
+    rgba(17, 105, 84, 0.8603816526610644) 72%
+  ); */
   
-    align-items: center;
-    margin: 30px auto;
-    border-radius: 10px;
-    border: 2px solid rgb(0, 0, 0);
+}
+
+.divcards {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: space-evenly;
+  width: 90%;
+  align-self: center;
+}
+
+.filtros {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  size: 20px;
+}
+.inputbusqueda {
+  size: 50px;
+  margin-left: 10px;
+}
+
+.notfound {
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.tipos {
+  border-radius: 5px;
+  border: 2px solid rgb(122, 28, 28);
+  width: 100px;
+}
+
+.botonrefresh {
+  width: 80px;
+  height: 40px;
+  margin-top: 0;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+.header {
+  align-items: center;
+  margin: 30px auto;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.button{
+  border-radius: 5px;
 }
