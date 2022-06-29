@@ -11,11 +11,12 @@ export const RANDOM_POKEMON = "RANDOM_POKEMON"
 export const IS_FILTERED = "IS_FILTERED"
 export const DETAIL_CLEAN = "DET>AIL_CLEAN"
 export const CLEAN = "CLEAN"
-
+const {REACT_APP_BACKEND_URL} = process.env
 export function getPokemon() {
 
     return function (dispatch) {
-        axios.get("http://localhost:3001/api/pokemons/pokemonshome")
+        // axios.get("http://localhost:3001/api/pokemons/pokemonshome")
+        axios.get(`${REACT_APP_BACKEND_URL}/api/pokemons/pokemonshome`)
             .then((pokemons) => {
                 dispatch({
                     type: GET_POKEMON,
@@ -29,7 +30,9 @@ export function getPokemon() {
 
 export function getRandom() {
     return function (dispatch) {
-        axios.get("http://localhost:3001/api/pokemons/pokemonsrandom")
+        // axios.get("http://localhost:3001/api/pokemons/pokemonsrandom")
+        axios.get(`${REACT_APP_BACKEND_URL}/api/pokemons/pokemonsrandom`)
+        
             .then((pokerandom) => {
                 dispatch({
                     type: RANDOM_POKEMON,
@@ -43,7 +46,8 @@ export function getRandom() {
 
 export function getTypes() {
     return function (dispatch) {
-        axios.get("http://localhost:3001/api/types/types")
+        // axios.get("http://localhost:3001/api/types/types")
+        axios.get(`${REACT_APP_BACKEND_URL}/api/types/types`)
             .then((types) => {
                 dispatch({
                     type: GET_TYPES,
@@ -58,7 +62,8 @@ export function getTypes() {
 export function searchPokemon(search) {
 
     return function (dispatch) {
-        axios.get("http://localhost:3001/api/pokemons/pokemons?name=" + search)
+        // axios.get("http://localhost:3001/api/pokemons/pokemons?name=" + search)
+        axios.get(`${REACT_APP_BACKEND_URL}/api/pokemons/pokemons?name=` + search)
             .then((response) => {
                 dispatch({
                     type: SEARCH_POKEMON,
@@ -74,7 +79,8 @@ export function searchPokemon(search) {
 export function detailPokemon(id) {
 
     return function (dispatch) {
-        axios.get("http://localhost:3001/api/pokemons/pokemonsid/" + id)
+        // axios.get("http://localhost:3001/api/pokemons/pokemonsid/" + id)
+        axios.get(`${REACT_APP_BACKEND_URL}/api/pokemons/pokemonsid/` + id)
             .then((response) => {
                 dispatch({
                     type: DETAILS_POKEMON,
@@ -90,7 +96,8 @@ export function detailPokemon(id) {
 export function createdPokemon(payload) {
     try {
         return async function () {
-            let infocreate = axios.post("http://localhost:3001/api/pokemons/pokemonscreate", payload)
+            // let infocreate = axios.post("http://localhost:3001/api/pokemons/pokemonscreate", payload)
+            let infocreate = axios.post(`${REACT_APP_BACKEND_URL}/api/pokemons/pokemonscreate`, payload)
             return infocreate
         }
     } catch (error) {
