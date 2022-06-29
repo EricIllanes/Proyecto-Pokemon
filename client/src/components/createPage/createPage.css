@@ -23,6 +23,7 @@
 }
 .bgcreate{
 min-height: 100vh;
-    background-image: url("C:\Users\Pirupiru\Desktop\Proyecto-Pokemon\client\src\components\imagenes\charmander.jpg");
+    /* background-image: url("C:\Users\Pirupiru\Desktop\Proyecto-Pokemon\client\src\components\imagenes\charmander.jpg"); */
+    background-color: black;
     background-size:cover;
 }
