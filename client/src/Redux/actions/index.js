@@ -94,15 +94,12 @@ export function detailPokemon(id) {
 }
 
 export function createdPokemon(payload) {
-    try {
         return async function () {
             // let infocreate = axios.post("http://localhost:3001/api/pokemons/pokemonscreate", payload)
             let infocreate = axios.post(`${REACT_APP_BACKEND_URL}/api/pokemons/pokemonscreate`, payload)
             return infocreate
         }
-    } catch (error) {
-        console.log(error)
-    }
+
 }
 
 export function filterPokemon(payload) {
