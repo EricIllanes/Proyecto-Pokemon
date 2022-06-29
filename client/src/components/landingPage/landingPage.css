@@ -1,5 +1,5 @@
 .landingpage{
-    background-image: url("C:\Users\Pirupiru\Desktop\Proyecto-Pokemon\client\src\components\imagenes\landing.jpg");
+    background-image: url("../imagenes/landing.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
