@@ -37,7 +37,6 @@ export default function rootReducer(state = initialState, action) {
             }
 
         case SEARCH_POKEMON:
-            console.log(1111, action.payload)
             if (!action.payload[0]) {
                 return {
                     ...state,
