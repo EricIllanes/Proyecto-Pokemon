@@ -60,7 +60,7 @@ export default function HomePage() {
                 <OrderPokemon />
                 <PokeRandom />
                 <button
-                    style={{borderRadius:'5px'}}
+                className="botonrefresh"
                     onClick={(e) => window.location.reload(e)}
                 >Refresh</button>
 
