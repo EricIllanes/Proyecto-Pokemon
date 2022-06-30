@@ -121,10 +121,9 @@ export default function CreatePage() {
             [event.target.name]: event.target.value
         }))
     }
-
     async function onChangeSubmit(event) {
         event.preventDefault();
-        let infocreate = await axios.post("http://localhost:3001/api/pokemons/pokemonscreate", input)
+        let infocreate = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/pokemons/pokemonscreate`, input)
         if (infocreate.data.msg) {
             alert(infocreate.data.msg)
         } else {
