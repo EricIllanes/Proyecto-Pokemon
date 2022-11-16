@@ -12,8 +12,10 @@ export default function PokemonCard({
   experience,
 }) {
   const dispatch = useDispatch();
+  console.log(11111, types[0].props.children.toLowerCase());  
   return (
     <div className="cardconte">
+      <div className={types[0].props.children.toLowerCase()}>
       <div className="namepc">
         <Link to={`/pokemonsid/${id}`} style={{ textDecoration: "black", }}>
           <h2 >{name}</h2>
@@ -37,6 +39,10 @@ export default function PokemonCard({
     
         </div>
             </h3>
+        
+
+      </div>
+     
     </div>
   );
 }

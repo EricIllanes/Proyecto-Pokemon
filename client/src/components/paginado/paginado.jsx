@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import "./paginado.css"
+import arrow from "../imagenes/right-arrow.png"
 
 export default function Paginado({ pagina, setPagina, maximo }) {
     const { pokemons } = useSelector(state => state)
@@ -32,7 +33,7 @@ export default function Paginado({ pagina, setPagina, maximo }) {
                         disabled={pagina === 1}
                         onClick={() => previousPage()}
                         style={{borderRadius:'5px'}}
-                    >Atrás</button>
+                    >Anterior</button>
                     <p
                         className="textopaginado"
                     >{pagina} de {Math.ceil(maximo)}</p>
