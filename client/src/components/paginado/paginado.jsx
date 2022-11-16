@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import "./paginado.css"
-import arrow from "../imagenes/right-arrow.png"
 
 export default function Paginado({ pagina, setPagina, maximo }) {
     const { pokemons } = useSelector(state => state)

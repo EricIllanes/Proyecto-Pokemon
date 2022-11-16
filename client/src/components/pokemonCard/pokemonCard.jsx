@@ -11,8 +11,7 @@ export default function PokemonCard({
   strength,
   experience,
 }) {
-  const dispatch = useDispatch();
-  console.log(11111, types[0].props.children.toLowerCase());  
+  const dispatch = useDispatch(); 
   return (
     <div className="cardconte">
       <div className={types[0].props.children.toLowerCase()}>
