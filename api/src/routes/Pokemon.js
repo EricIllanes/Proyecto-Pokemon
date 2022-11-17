@@ -112,16 +112,17 @@ router.get("/pokemons", async (req, res, next) => {
                 types: pokeAPI.data.types.map(e => e.type.name)
 
             }]
-            res.send(filteredPokemon)
-        }
+            res.json(filteredPokemon)
+        } else {
+            const pokeDBresult = [{
+                id: pokeDB[0].id,
+                name: pokeDB[0].name.charAt(0).toUpperCase() + pokeDB[0].name.slice(1),
+                image: pokeDB[0].image,
+                types: pokeDB[0].types.map(e => e.name)
+            }]
+            res.json(pokeDBresult)
 
-        const pokeDBresult = [{
-            id: pokeDB[0].id,
-            name: pokeDB[0].name.charAt(0).toUpperCase() + pokeDB[0].name.slice(1),
-            image: pokeDB[0].image,
-            types: pokeDB[0].types.map(e => e.name)
-        }]
-        res.send(pokeDBresult)
+        }
     } catch (error) {
         res.send([])
     }
@@ -177,7 +178,6 @@ router.get("/pokemonsrandom", async (req, res, next) => {
 })
 
 router.get("/pokemonshome", async (req, res, next) => {
-    //debe devolver Imagen, nombre, tipo, 
     try {
         let probanding = []
         let probandingDB = []
@@ -205,6 +205,7 @@ router.get("/pokemonshome", async (req, res, next) => {
 
             })
         }
+
         while (n < 41) {
             let pokeDetailHome = await axios.get(`https://pokeapi.co/api/v2/pokemon/${n}/`)
             probanding.push({
@@ -225,7 +226,8 @@ router.get("/pokemonshome", async (req, res, next) => {
         let allPokeHome = [...probandingDB, ...probanding]
         res.send(allPokeHome)
     } catch (error) {
-        next(error)
+        console.error(error)
+        res.status(400).json({ message: "Internal server error" })
     }
 })
 

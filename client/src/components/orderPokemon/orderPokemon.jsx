@@ -15,8 +15,6 @@ export default function OrderPokemon() {
     function onSelectChange(e) {
         e.preventDefault()
         dispatch(orderPokemon(e.target.value))
-        // document.getElementById("selectorder").selectedIndex = 0
-        // document.getElementById("selectorderaz").selectedIndex = 0
     }
     return (<>{
         (pokemons.length > 0) ?

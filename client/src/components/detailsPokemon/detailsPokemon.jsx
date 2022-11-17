@@ -4,6 +4,7 @@ import Pokedex from "../imagenes/Pokedex.png";
 import { Link, useParams } from "react-router-dom";
 import { cleanDetail, detailPokemon } from "../../Redux/actions";
 import { useEffect } from "react";
+import { JellyTriangle } from "@uiball/loaders";
 
 export default function DetailPokemon() {
   const { detailsPokemon } = useSelector((state) => state);
@@ -54,11 +55,14 @@ export default function DetailPokemon() {
                 <h3>Speed: {detailsPokemon.speed}</h3>
                 <h3>Height: {detailsPokemon.height / 10} mt</h3>
                 <h3>Weight: {detailsPokemon.weight / 10} Kg</h3>
-              {/* </div> */}
+                {/* </div> */}
               </div>
+         
             </div>
           ) : (
-            <div>Loading...</div>
+            <div>
+              <JellyTriangle size={60} speed={1.75} color="black" />
+            </div>
           )}
         </div>
       </div>
