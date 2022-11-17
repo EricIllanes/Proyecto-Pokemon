@@ -1,4 +1,16 @@
+.bgcreate {
+  background-image: url("https://i.imgur.com/0657X9i.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;;
+}
+
 .formulario {
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -11,20 +23,23 @@
   margin: 0 auto;
 }
 .inputcreacion {
+  margin-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.buttons-create{
+  margin-top: 5px;
+  display: flex;
+  justify-content: right;
   align-items: center;
-  flex-wrap: wrap;
-  display: flex;
+  width: 95%;
   flex-direction: row;
-  align-self: center;
-  width: 100%;
 }
-.bgcreate {
-  background-image: url("https://i.imgur.com/0657X9i.png");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
+
+
+.footer-create{
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
+

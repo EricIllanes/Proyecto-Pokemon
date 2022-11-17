@@ -1,12 +1,11 @@
 .div-navBar{
+    padding-top: 5px;
     display: flex;
-    background-color: #ffffff10;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 95%;
     flex-direction: column;
+    align-self: center;
 }
 .div-buttons{
     display: flex;
@@ -25,10 +24,10 @@
   }
   
 .titulo{
-    color: #e7e7e7;
+    color:#18394a;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
 }
 .divbuscador{
     width: 40%;
@@ -45,12 +44,17 @@
     border: none;
     margin-right: 10px;
     padding-right: 10px;
+    box-shadow: 3px 5px 6px rgba(0,0,0,0.2);
   }
 
 .button-search{
     height: 30px;
     border-radius: 5px;
     border: none;
-    margin-right: 10px;
-    padding-right: 10px;
+    /* box-shadow: 3px 5px 6px rgba(0,0,0,0.2); */
+}
+.button-search:hover{
+    background-color: #18394a;
+    color: white;
+    cursor: pointer;
 }

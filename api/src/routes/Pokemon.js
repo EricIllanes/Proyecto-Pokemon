@@ -179,52 +179,94 @@ router.get("/pokemonsrandom", async (req, res, next) => {
 
 router.get("/pokemonshome", async (req, res, next) => {
     try {
-        let probanding = []
+        // let probanding = []
+        // let probandingDB = []
+        // let n = 1
+        // let pokeDBS = await Pokemons.findAll({
+        //     include:
+        //         [{
+        //             model: Types,
+        //             attributes: ["name"],
+        //         }]
+
+        // })
+        // for (let i = 0; i < pokeDBS.length; i++) {
+        //     probandingDB.push({
+        //         id: pokeDBS[i].id,
+        //         name: pokeDBS[i].name.charAt(0).toUpperCase() + pokeDBS[i].name.slice(1),
+        //         image: pokeDBS[i].image,
+        //         types: pokeDBS[i].types.map(e => e.name),
+        //         strength: pokeDBS[i].strength,
+        //         life: pokeDBS[i].life,
+        //         defense: pokeDBS[i].defense,
+        //         speed: pokeDBS[i].speed,
+        //         height: pokeDBS[i].height,
+        //         weight: pokeDBS[i].weight,
+
+        //     })
+        // }
+
+        // while (n < 41) {
+        //     let pokeDetailHome = await axios.get(`https://pokeapi.co/api/v2/pokemon/${n}/`)
+        //     probanding.push({
+        //         id: pokeDetailHome.data.id,
+        //         name: pokeDetailHome.data.forms[0].name.charAt(0).toUpperCase() + pokeDetailHome.data.forms[0].name.slice(1),
+        //         image: pokeDetailHome.data.sprites.other.home.front_default,
+        //         types: pokeDetailHome.data.types.map(e => e.type.name),
+        //         strength: pokeDetailHome.data.stats[1].base_stat,
+        //         life: pokeDetailHome.data.stats[0].base_stat,
+        //         defense: pokeDetailHome.data.stats[2].base_stat,
+        //         speed: pokeDetailHome.data.stats[5].base_stat,
+        //         height: pokeDetailHome.data.height,
+        //         weight: pokeDetailHome.data.weight,
+        //         experience: pokeDetailHome.data.base_experience
+        //     })
+        //     n++
+        // }
+        // let allPokeHome = [...probandingDB, ...probanding]
+        // res.send(allPokeHome)
+        //debo crear un array 
+        let random = []
+        let pokemonsrandom = []
         let probandingDB = []
-        let n = 1
+
+        const genNum = (min, max) => {
+            return Math.floor(Math.random() * (max - min)) + min
+        }
+        for (let i = 0; i < 40; i++) {
+            random.push(genNum(40, 860))
+        }
         let pokeDBS = await Pokemons.findAll({
             include:
                 [{
                     model: Types,
                     attributes: ["name"],
                 }]
-
         })
         for (let i = 0; i < pokeDBS.length; i++) {
             probandingDB.push({
                 id: pokeDBS[i].id,
                 name: pokeDBS[i].name.charAt(0).toUpperCase() + pokeDBS[i].name.slice(1),
                 image: pokeDBS[i].image,
-                types: pokeDBS[i].types.map(e => e.name),
                 strength: pokeDBS[i].strength,
-                life: pokeDBS[i].life,
-                defense: pokeDBS[i].defense,
-                speed: pokeDBS[i].speed,
-                height: pokeDBS[i].height,
-                weight: pokeDBS[i].weight,
-
+                types: pokeDBS[i].types.map(e => e.name)
             })
         }
 
-        while (n < 41) {
-            let pokeDetailHome = await axios.get(`https://pokeapi.co/api/v2/pokemon/${n}/`)
-            probanding.push({
-                id: pokeDetailHome.data.id,
-                name: pokeDetailHome.data.forms[0].name.charAt(0).toUpperCase() + pokeDetailHome.data.forms[0].name.slice(1),
-                image: pokeDetailHome.data.sprites.other.home.front_default,
-                types: pokeDetailHome.data.types.map(e => e.type.name),
-                strength: pokeDetailHome.data.stats[1].base_stat,
-                life: pokeDetailHome.data.stats[0].base_stat,
-                defense: pokeDetailHome.data.stats[2].base_stat,
-                speed: pokeDetailHome.data.stats[5].base_stat,
-                height: pokeDetailHome.data.height,
-                weight: pokeDetailHome.data.weight,
-                experience: pokeDetailHome.data.base_experience
+
+        for (let x = 0; x < random.length; x++) {
+            let pokeCall = await axios.get(`https://pokeapi.co/api/v2/pokemon/${random[x]}`)
+            pokemonsrandom.push({
+                id: pokeCall.data.id,
+                name: pokeCall.data.forms[0].name.charAt(0).toUpperCase() + pokeCall.data.forms[0].name.slice(1),
+                image: pokeCall.data.sprites.other.home.front_default,
+                strength: pokeCall.data.stats[1].base_stat,
+                types: pokeCall.data.types.map(e => e.type.name)
             })
-            n++
         }
-        let allPokeHome = [...probandingDB, ...probanding]
-        res.send(allPokeHome)
+        let allRandomPoke = [...pokemonsrandom, ...probandingDB]
+        res.send(allRandomPoke)
+
     } catch (error) {
         console.error(error)
         res.status(400).json({ message: "Internal server error" })

@@ -15,12 +15,11 @@ function App() {
       <Router>
 
         <Routes>
-          <Route exact path="/" element={<LandingPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/landingpage" element={<LandingPage />} />
+          <Route exact path="/" element={<HomePage />} />
           <Route path="/createpokemon" element={<CreatePage />} />
           <Route path="/pokemonsid/:id" element={<DetailPokemon />} />
         </Routes>
-
 
       </Router>
     </div>

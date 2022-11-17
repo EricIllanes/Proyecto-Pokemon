@@ -5,14 +5,11 @@
     flex-direction: row;
     margin: 20px auto;
 }
-.botonadelante{
-    margin: auto 10px
-}
-
-.botonatras{
-    margin: auto 10px
-}
 
 .textopaginado{
-    margin: auto 10px
+    margin: auto 10px;
+    color:#18394a;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }

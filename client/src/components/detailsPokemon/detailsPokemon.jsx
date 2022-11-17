@@ -17,8 +17,8 @@ export default function DetailPokemon() {
     <div>
       <div className="detailcard">
         <div className="butonpadre">
-          <Link to="/home" onClick={() => dispatch(cleanDetail())}>
-            <button style={{ borderRadius: "5px" }}>Home</button>
+          <Link to="/" onClick={() => dispatch(cleanDetail())}>
+            <button className="button-search">Home</button>
           </Link>
 
           {detailsPokemon.name ? (

@@ -23,15 +23,34 @@
 }
 
 .title{
-    font-size: 80px;
+    /* font-size: 80px;
     color: rgb(19, 57, 67);
-    border-radius: 2px solid black;
+    border-radius: 2px solid black; */
+    margin: auto 10px;
+    color:#18394a;
+    font-size: 90px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
-.button-landing{
+/* .button-landing{
     border-radius: 10px;
     border: 0px solid transparent;
     background-color: transparent;
     box-shadow: 3px 5px 6px rgba(0,0,0,0.2);
     font-size:30px;
+} */
+
+.button-landing{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 3px 5px 6px rgba(0,0,0,0.2);
+}
+.button-landing:hover{
+    background-color: #18394a;
+    color: white;
+    cursor: pointer;
 }

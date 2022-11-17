@@ -17,14 +17,14 @@ export default function NavBar() {
   return (
     <div className="div-navBar">
         <div className="div-buttons">
-        <Link to="/">
-        <button style={{ borderRadius: "5px" }}>Landing</button>
-      </Link>
-      <Link to="/home">
-        <button style={{ borderRadius: "5px" }}>Home</button>
+        {/* <Link to="/">
+        <button className="button-search">Landing</button>
+      </Link> */}
+      <Link to="/">
+        <button className="button-search">Home</button>
       </Link>
       <Link to="/createpokemon">
-        <button style={{ borderRadius: "5px" }}>Create Digimon</button>
+        <button className="button-search">Create Digimon</button>
       </Link>
 
         </div>
