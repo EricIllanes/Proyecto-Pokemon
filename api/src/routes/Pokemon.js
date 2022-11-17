@@ -265,7 +265,7 @@ router.get("/pokemonshome", async (req, res, next) => {
             })
         }
         let allRandomPoke = [...pokemonsrandom, ...probandingDB]
-        res.send(allRandomPoke)
+        res.status(200).send(allRandomPoke)
 
     } catch (error) {
         console.error(error)
