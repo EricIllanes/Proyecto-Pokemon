@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux"
 import { cleanPokemon, getRandom } from "../../Redux/actions"
+import "./pokeRandom.css"
 
 export default function PokeRandom() {
     const dispatch = useDispatch()
@@ -10,8 +11,9 @@ export default function PokeRandom() {
         dispatch(getRandom())
     }
 
-    return (<div>
+    return (<div className="div-button-random">
         <button
+        className="button-search"
             style={{borderRadius:'5px'}}
             onClick={(e) => onHandleClick(e)}
         >Random Search</button>

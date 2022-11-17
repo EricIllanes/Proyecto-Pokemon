@@ -1,3 +1,16 @@
+.background {
+  background-image: url("https://i.imgur.com/0657X9i.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  height: 100%;
+  align-items: center;
+}
+
 .div-spinner{
   display: flex;
   flex-direction: column;
@@ -9,25 +22,39 @@
   
 }
 
-.background {
-  background-image: url("https://i.imgur.com/0657X9i.png");
+.div-contenedor-homepage{
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  padding: 40px 0;
+  /* background-color: rgb(174, 130, 216); */
+}
 
-  background-size: cover;
+.div-filters{
+  height: 450px;
+  border-radius: 10px;
+  align-content: center;
   display: flex;
   flex-direction: column;
-  align-self: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-  height: 100%;
+  width: 20%;
+  margin: 0 20px;
+
 }
 
 .divcards {
-  display: grid;
+  /* background-color: brown; */
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  justify-content: center;
+  /* display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   justify-content: space-evenly;
   width: 90%;
-  align-self: center;
+  align-self: center; */
 }
 
 .filtros {
@@ -52,17 +79,20 @@
   width: 100px;
 }
 
-.botonrefresh {
-  width: 80px;
-  height: 20px;
-  margin-top: 0;
-  margin-left: 40px;
+.button-refresh{
   margin-right: 10px;
+  padding-right: 10px;
+  align-self: center;
+  background-color: #baed78;
+  width: 60%;
+  color: #18394a;
+  height: 30px;
   border-radius: 5px;
+  border: none;
+  box-shadow: 3px 5px 6px rgba(0,0,0,0.2);
 }
-
-
-.button{
-  border-radius: 5px;
+.button-refresh:hover{
+  background-color: #18394a;
+  color: #fff6a4;
+  cursor: pointer;
 }
-

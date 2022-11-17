@@ -13,6 +13,7 @@
     align-items: center;
     width: 100%;
     flex-direction: row;
+    gap:20px;
 }
 
 .header {
@@ -48,13 +49,16 @@
   }
 
 .button-search{
+    /* background-color: #fff6a4; */
+    background-color: #baed78;
+    color: #18394a;
     height: 30px;
     border-radius: 5px;
     border: none;
-    /* box-shadow: 3px 5px 6px rgba(0,0,0,0.2); */
+    box-shadow: 3px 5px 6px rgba(0,0,0,0.2);
 }
 .button-search:hover{
     background-color: #18394a;
-    color: white;
+    color: #fff6a4;
     cursor: pointer;
 }

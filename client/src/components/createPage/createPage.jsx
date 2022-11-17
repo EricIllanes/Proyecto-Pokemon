@@ -148,7 +148,7 @@ export default function CreatePage() {
         <button className="button-search">Home</button>
       </Link>
       <Link to="/createpokemon">
-        <button className="button-search">Create Digimon</button>
+        <button className="button-search">Create Pokémon</button>
       </Link>
 
         </div>

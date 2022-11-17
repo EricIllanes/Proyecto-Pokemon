@@ -1,19 +1,26 @@
 .filter{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .filtertype{
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin: 10px 10px;
 }
 
 .filterorigen{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin: 10px 10px;
+}
+
+.filtered-text{
+    color:#18394a;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
 }

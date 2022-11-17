@@ -24,7 +24,7 @@ export default function NavBar() {
         <button className="button-search">Home</button>
       </Link>
       <Link to="/createpokemon">
-        <button className="button-search">Create Digimon</button>
+        <button className="button-search">Create Pokémon</button>
       </Link>
 
         </div>
@@ -33,6 +33,7 @@ export default function NavBar() {
         <h1 className="titulo">Gotta Catch 'Em All!</h1>
         <div className="filtros">
           <div className="divbuscador">
+            
             <input
               className="inputbusqueda"
               type="text"
@@ -54,6 +55,7 @@ export default function NavBar() {
             >
               Search
             </button>
+            <PokeRandom />
           </div>
 {/* 
           <FilteredPokemon />
