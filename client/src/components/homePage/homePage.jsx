@@ -126,7 +126,7 @@ export default function HomePage() {
       ) : (
         <></>
       )}
-
+      
       <Paginado pagina={pagina} setPagina={setPagina} maximo={maximo} />
     </div>
   );
